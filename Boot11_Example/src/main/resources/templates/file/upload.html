@@ -2,20 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>templates/file/upload.html</title>
+<title>/file/upload.html</title>
 </head>
 <body>
 	<div class="container">
+		<h3>알림</h3>
 		<p>
-			<strong>[[${orgFileName}]]</strong> 파일을 업로드 했습니다
+			파일이 업로드 되었습니다.
+			<a th:href="@{/file/list}">목록보기</a>
 		</p>
-		<p>
-			저장된 파일명 : <strong th:text="${saveFileName}"></strong>
-		</p>
-		<p>
-			파일의 크기 : <strong th:text="${fileSize}"></strong> byte
-		</p>
-		<a th:href="@{/file/download(orgFileName=${orgFileName}, saveFileName=${saveFileName}, fileSize=${fileSize})}">임시 다운로드</a>
 	</div>
 </body>
 </html>

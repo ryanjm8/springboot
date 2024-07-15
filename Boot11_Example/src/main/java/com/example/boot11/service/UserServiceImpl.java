@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.boot11.dto.FileDto;
 import com.example.boot11.dto.UserDto;
 import com.example.boot11.exception.PasswordException;
 import com.example.boot11.repository.UserDao;
@@ -98,7 +99,7 @@ public class UserServiceImpl implements UserService{
 		//7. DB 에 비밀번호 수정반영를 한다.
 		dao.updatePwd(dto);
 	}
-
+	
 }
 
 
